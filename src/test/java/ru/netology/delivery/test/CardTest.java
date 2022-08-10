@@ -12,16 +12,16 @@ import java.time.Duration;
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.*;
 
-class CardTest {
+public class CardTest {
 
     @BeforeEach
-    void openBrowser() {
+    public void openBrowser() {
         open("http://localhost:9999");
     }
 
     @Test
     @DisplayName("Should successful plan and replan meeting")
-    void shouldSuccessfulPlanAndReplanMeeting() {
+    public void shouldSuccessfulPlanAndReplanMeeting() {
         var validUser = DataGenerator.Registration.generateUser("ru");
         var daysToAddForFirstMeeting = 4;
         var firstMeetingDate = DataGenerator.generateDate(daysToAddForFirstMeeting);

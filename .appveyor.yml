@@ -1,3 +1,5 @@
+
+
 image: Ubuntu  # образ для сборки
 
 stack: jdk 11  # версия JDK
@@ -14,4 +16,4 @@ install:
 
 build_script:
   - chmod +x gradlew
-  - ./gradlew test -Dselenide.headless=true --info
+  - ./gradlew test --info "-Dselenide.headless=true"
